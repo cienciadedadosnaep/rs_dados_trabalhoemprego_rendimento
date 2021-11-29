@@ -1,0 +1,4 @@
+"TEMA";"SUBTEMA";"PERGUNTA";"NOME_ARQUIVO_JS"
+"Trabalho e Emprego";"Rendimento";"Qual o rendimento médio mensal de todas as pessoas de 14 anos ou mais de idade em Salvador?";"rendimento_total.csv"
+"Trabalho e Emprego";"Rendimento";"Qual o rendimento médio mensal de pessoas de 14 anos ou mais de idade organizado por raça/cor em Salvador?";"rendimento_raçacor.csv"
+"Trabalho e Emprego";"Rendimento";"Qual o rendimento médio mensal de pessoas de 14 anos ou mais de idade organizado por sexo biológico em Salvador?";"rendimento_sexo.csv"
