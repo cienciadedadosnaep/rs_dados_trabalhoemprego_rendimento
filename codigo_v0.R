@@ -76,7 +76,7 @@ corsec_recossa_azul <- c('#175676','#62acd1','#8bc6d2','#20cfef',
   objeto_0 <- dados %>%
     filter(classe %in% c(classes[1])) %>%
     select(trimestre,valor) %>% #filter(ano<2019) %>%
-    arrange(trimestre) %>%
+    #arrange(trimestre) %>%
     mutate(trimestre = as.character(trimestre)) %>% list()               
   
   exportJson0 <- toJSON(objeto_0)
@@ -86,9 +86,12 @@ corsec_recossa_azul <- c('#175676','#62acd1','#8bc6d2','#20cfef',
   subtexto<-"SIDRA IBGE"
   link <- T_ST_P_No_TRABALHOEMPREGO$LINK[1]
   
-  data_axis <- paste('[',gsub(' ',',',
+  data_axis <- paste('["',gsub(' ','","',
                               paste(paste(as.vector(objeto_0[[1]]$trimestre)),
-                                    collapse = ' ')),']',sep = '')
+                                   collapse = ' ')),'"]',sep = '')
+  #data_axis <- paste('[',gsub(' ',',',
+   #                           paste(as.vector(objeto_0[[1]]$trimestre))),']',sep = '')
+  #data_axis = gsub('[','',data_axis)
   
   data_serie <- paste('[',gsub(' ',',',
                                paste(paste(as.vector(objeto_0[[1]]$valor)),
@@ -100,7 +103,7 @@ corsec_recossa_azul <- c('#175676','#62acd1','#8bc6d2','#20cfef',
                '"tooltip":{"trigger":"axis"},',
                '"toolbox":{"left":"center","orient":"horizontal","itemSize":20,"top":45,"show":true,',
                '"feature":{"dataZoom":{"yAxisIndex":"none"},',
-               '"dataView":{"readOnly":false},"magicType":{"type":["bar","line"]},',
+               '"dataView":{"readOnly":false},',
                '"restore":{},"saveAsImage":{}}},"xAxis":{"type":"category",',
                '"data":',data_axis,'},',
                '"yAxis":{"type":"value","axisLabel":{"formatter":"{value}"}},',
