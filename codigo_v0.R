@@ -89,9 +89,7 @@ corsec_recossa_azul <- c('#175676','#62acd1','#8bc6d2','#20cfef',
   data_axis <- paste('["',gsub(' ','","',
                               paste(paste(as.vector(objeto_0[[1]]$trimestre)),
                                    collapse = ' ')),'"]',sep = '')
-  #data_axis <- paste('[',gsub(' ',',',
-   #                           paste(as.vector(objeto_0[[1]]$trimestre))),']',sep = '')
-  #data_axis = gsub('[','',data_axis)
+  
   
   data_serie <- paste('[',gsub(' ',',',
                                paste(paste(as.vector(objeto_0[[1]]$valor)),
