@@ -45,7 +45,7 @@ library(jsonlite)
 # #dbClearResult(rs)
 
 library(readr)
-dados <- read_csv("data/recossa_rendimento.csv")
+dados <- read_csv("data/recossa_rendimento_s.csv")
 dados2 <- data.frame(dados)
 names(dados)
 #dados = recossa_rendimento
@@ -139,50 +139,50 @@ dados <- data_serie
 #    select(ano,consumo) %>% filter(ano<2019) %>%
 #    arrange(ano) %>%
 #    mutate(ano = as.character(ano)) %>% list()               
-  
-  exportJson0 <- toJSON(teste3)
-  
-  
-  titulo<-T_ST_P_No_TRABALHOEMPREGO$TITULO[1]
-  subtexto<-"Painel do Saneamento"
-  link <- T_ST_P_No_TRABALHOEMPREGO$LINK[1]
-  
-  
-  texto <- paste('{"title":{"text":"',titulo,
-                 '","subtext":"',subtexto,
-                 '","sublink":"',link,
-                 '"},"legend":{"show":true,"top":"bottom"},"tooltip":{},"dataset":{"source":[',data_serie,
-                 ']},"xAxis":[{"type":"category","gridIndex":0}],',
-                 '"yAxis":[{"gridIndex":0}],',
-                 '"series":[{"type":"bar",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[1],
-                 '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
-                 '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[1],
-                 '","borderWidth":2}},',
-                 '{"type":"bar",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[2],
-                 '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
-                 '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[2],
-                 '","borderWidth":2}}',
-                 ']','}',sep="")
-  
-  ## OBS - Incluir 
-  ## Se for necessario coloca mais colunas além das 2 do default, e escolher 
-  ## uma cor pelo vetor corsec_recossa_azul[i],
-  
-  #{"type":"bar",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[3],
-  #               '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
-  #               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[3],
-  #               '","borderWidth":2}},',
-  
-  
-  #  SAIDA_POVOAMENTO$CODIGO[i] <- texto   
-  texto<-noquote(texto)
-  
-  
-  write(exportJson0,file = paste('data/',gsub('.csv','',T_ST_P_No_POPULACAO$NOME_ARQUIVO_JS[1]),
-                                 '.json',sep =''))
-  write(texto,file = paste('data/',T_ST_P_No_POPULACAO$NOME_ARQUIVO_JS[1],
-                           sep =''))
-  
+
+exportJson0 <- toJSON(teste3)
+
+
+titulo<-T_ST_P_No_TRABALHOEMPREGO$TITULO[3]
+subtexto<-"SIDRA IBGE"
+link <- T_ST_P_No_TRABALHOEMPREGO$LINK[3]
+
+
+texto <- paste('{"title":{"text":"',titulo,
+               '","subtext":"',subtexto,
+               '","sublink":"',link,
+               '"},"legend":{"show":true,"top":"bottom"},"tooltip":{},"dataset":{"source":[',data_serie,
+               ']},"xAxis":[{"type":"category","gridIndex":0}],',
+               '"yAxis":[{"gridIndex":0}],',
+               '"series":[{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[2],
+               '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
+               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[2],
+               '","borderWidth":2}},',
+               '{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[3],
+               '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
+               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[3],
+               '","borderWidth":2}}',
+               ']','}',sep="")
+
+## OBS - Incluir 
+## Se for necessario coloca mais colunas além das 2 do default, e escolher 
+## uma cor pelo vetor corsec_recossa_azul[i],
+
+#{"type":"bar",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[3],
+#               '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
+#               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[3],
+#               '","borderWidth":2}},',
+
+
+#  SAIDA_POVOAMENTO$CODIGO[i] <- texto   
+texto<-noquote(texto)
+
+
+write(exportJson0,file = paste('data/',gsub('.csv','',T_ST_P_No_TRABALHOEMPREGO$NOME_ARQUIVO_JS[3]),
+                               '.json',sep =''))
+write(texto,file = paste('data/',T_ST_P_No_TRABALHOEMPREGO$NOME_ARQUIVO_JS[3],
+                         sep =''))
+
 #}
 
 # Arquivo dedicado a rotina de atualizacao global. 
