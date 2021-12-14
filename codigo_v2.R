@@ -162,9 +162,9 @@ texto <- paste('{"title":{"text":"',titulo,
                '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
                '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[5],
                '","borderWidth":2}}',
-               '{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[6],
+               '{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[7],
                '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
-               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[6],
+               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[7],
                '","borderWidth":2}}',
                ']','}',sep="")
 
