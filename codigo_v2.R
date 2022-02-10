@@ -144,7 +144,7 @@ exportJson0 <- toJSON(teste3)
 
 
 titulo<-T_ST_P_No_TRABALHOEMPREGO$TITULO[2]
-subtexto<-"SIDRA IBGE"
+subtexto<-"Fonte: SIDRA IBGE"
 link <- T_ST_P_No_TRABALHOEMPREGO$LINK[2]
 
 

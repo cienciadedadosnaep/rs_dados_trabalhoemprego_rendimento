@@ -83,7 +83,7 @@ corsec_recossa_azul <- c('#175676','#62acd1','#8bc6d2','#20cfef',
   
   
   titulo<-T_ST_P_No_TRABALHOEMPREGO$TITULO[1]
-  subtexto<-"SIDRA IBGE"
+  subtexto<-"Fonte: SIDRA IBGE"
   link <- T_ST_P_No_TRABALHOEMPREGO$LINK[1]
   
   data_axis <- paste('["',gsub(' ','","',
