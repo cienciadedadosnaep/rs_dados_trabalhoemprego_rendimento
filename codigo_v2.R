@@ -125,9 +125,13 @@ SAIDA_POVOAMENTO <- as.data.frame(SAIDA_POVOAMENTO)
 #classes <- levels(as.factor(dados_ca$classe))
 
 # Cores secundarias paleta pantone -
-corsec_recossa_azul <- c('#175676','#62acd1','#8bc6d2','#20cfef',
-                         '#d62839','#20cfef','#fe4641','#175676',
-                         '#175676','#62acd1','#8bc6d2','#20cfef')
+corsec_recossa_azul <- c('#a094e1','#dc6f6c','#62acd1','#8bc6d2',
+                         '#d62839','#20cfef','#fe4641','#175676')
+
+# Cor 1 - Roxo; Cor 2, 5, 7 - Vermelho; Cor 3, 4, 6, 8 - Azul
+
+simbolo_linhas <- c('emptyCircle','triangle','square','diamond',
+                    'circle','roundRect')
 
 #for ( i in 1:length(classes)) {
 dados <- NULL
@@ -154,17 +158,20 @@ texto <- paste('{"title":{"text":"',titulo,
                '"},"legend":{"show":true,"top":"bottom"},"tooltip":{},"dataset":{"source":[',data_serie,
                ']},"xAxis":[{"type":"category","gridIndex":0}],',
                '"yAxis":[{"type":"value","gridIndex":0,"axisLabel":{"formatter":"R$ {value}"}}],',
-               '"series":[{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[4],
+               '"series":[{"type":"line",','"seriesLayoutBy":"row"',simbolo_linhas[1],
+               '","symbolSize":10,"color":"',corsec_recossa_azul[4],
                '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
                '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[4],
                '","borderWidth":2}},',
-               '{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[5],
+               '{"type":"line",','"seriesLayoutBy":"row"',simbolo_linhas[2],
+               '","symbolSize":10,"color":"',corsec_recossa_azul[5],
                '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
                '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[5],
                '","borderWidth":2}}',
-               '{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[7],
+               '{"type":"line",','"seriesLayoutBy":"row"',simbolo_linhas[3],
+               '","symbolSize":10,"color":"',corsec_recossa_azul[8],
                '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
-               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[7],
+               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[8],
                '","borderWidth":2}}',
                ']','}',sep="")
 

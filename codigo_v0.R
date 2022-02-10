@@ -67,9 +67,9 @@ classes <- NULL
 classes <- levels(as.factor(dados$classe))
 
 # Cores secundarias paleta pantone -
-corsec_recossa_azul <- c('#175676','#62acd1','#8bc6d2','#20cfef',
-                         '#d62839','#20cfef','#fe4641','#175676',
-                         '#175676','#62acd1','#8bc6d2','#20cfef')
+corsec_recossa_azul <- c('#a094e1','#dc6f6c','#62acd1','#8bc6d2',
+                         '#d62839','#20cfef','#fe4641','#175676')
+# Cor 1 - Roxo; Cor 2, 5, 7 - Vermelho; Cor 3, 4, 6, 8 - Azul
 
 #for ( i in 1:length(classes)) {
   
