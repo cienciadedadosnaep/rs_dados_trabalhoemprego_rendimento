@@ -130,8 +130,8 @@ corsec_recossa_azul <- c('#a094e1','#dc6f6c','#62acd1','#8bc6d2',
 
 # Cor 1 - Roxo; Cor 2, 5, 7 - Vermelho; Cor 3, 4, 6, 8 - Azul
 
-simbolo_linhas <- c('emptyCircle','triangle','square','diamond',
-                    'circle','roundRect')
+simbolo_linhas <- c('emptyCircle','emptyTriangle','emptySquare',
+                    'emptyDiamond','emptyRoundRect')
 
 #for ( i in 1:length(classes)) {
 dados <- NULL
