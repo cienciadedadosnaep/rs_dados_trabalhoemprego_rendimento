@@ -48,6 +48,12 @@ dados <- read_csv("data/recossa_rendimento.csv")
 names(dados)
 nomes <- names(dados)
 nomes[2] = 'Total'
+
+#Reorganizando a escala
+
+dados %<>% mutate(`valor`=`valor`/1000)
+dados
+
 ##  Perguntas e titulos 
 T_ST_P_No_TRABALHOEMPREGO <- read_csv("data/TEMA_SUBTEMA_P_No - TRABALHOEMPREGO.csv")
 
@@ -115,7 +121,7 @@ texto<-paste('{"title":{"text":"',titulo,
              '"dataView":{"readOnly":false},',
              '"restore":{},"saveAsImage":{}}},"legend":{"show":true,"top":"bottom"},"xAxis":{"type":"category",',
              '"data":',data_axis,'},',
-             '"yAxis":{"type":"value","axisLabel":{"formatter":"R$ {value}"}},',
+             '"yAxis":{"type":"value","axisLabel":{"formatter":"R$ {value} mil"}},',
              '"series":[{"name":"',nomes[2],'","data":',data_serie,',',
              '"type":"line","color":"',corsec_recossa_azul[1],'","showBackground":true,',
              '"backgroundStyle":{"color":"rgba(180, 180, 180, 0.2)"},"symbol":"',simbolo_linhas[1],
